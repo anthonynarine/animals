@@ -1,8 +1,8 @@
 # animals
 
 The goal of this app is to show content on the screen
-and how its going to change over time with user clicks
-on each inidvidual animal element
+and how its going to change over time using EVENT handler
+and useState function. 
 
 ~ Button Creation ~
 
@@ -12,7 +12,8 @@ that increments.
 
 This will utilize React's Event system and the state system
 
-~ Event system:
+                ~ Event system ~ 
+
     This will detect a user doing something inside the app
     such as clicking on a button or draggging in element 
     typing and so on
@@ -40,9 +41,31 @@ This will utilize React's Event system and the state system
         </div>
     };
     
-  ~ parentheses are not used when calling our event handler 
+  ~ parenthesis are not used when calling our event handler 
     function (line 39) or callback (can be called either) this give the button the whole function so the button can call the function IN THE FUTURE when the button is clicked. Adding the 
-    parentheses will call the function Immediately once App.js is
+    parenthesis will call the function Immediately once App.js is
     executed in the browser (no bueno)
 
+ ~ Inline handler function calls are generally used for small events 
+   tasks as the one we are currently trying to a
+       function App() {
+        return <div>
+            <button onClick={() => console.log("Button was clicked")}>Add Animal</button>
+        </div>
+    };
+
+                          ~ State system ~
+    State is data that changes as the user interacts with our app
+    When this data changes React updates content on the screen automatically
+    This is the one and ONLY way we can change what content React shows
+    (if you catch yourself saying if the users clicks here i want to show this
+    it means you want to use the state system)
+
+    1. Define a piece of state with the useState function
+    2. Give a value to the useState function. This is the
+       default, starting value for our piece of state
+    3. Use the state in some way in our component (often
+       in the return JSX)
+    4  When the user does something, update the piece of satate
+       this causes React to render the component
 
