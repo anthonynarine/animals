@@ -4,6 +4,11 @@ The goal of this app is to show content on the screen
 and how its going to change over time using EVENT handler
 and useState function. 
 
+    Main React Concepts built into this project:
+    1. Events and listening for events
+    2. State and updating state
+    3. List and using map to transform a list
+
 ~ Button Creation ~
 
 Problem 1.
@@ -196,3 +201,7 @@ function AnimalShow ({type}) {
         1st div (only div) className="animal-show"
         1st img className="animal"
         2nd img class Name="heart"
+
+
+
+
