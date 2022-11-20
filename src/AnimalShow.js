@@ -1,13 +1,25 @@
-import bird from "./svgArt/bird.sfg";
-import cat from "./svgArt/cat.sfg";
-import cow from "./svgArt/cow.sfg";
-import dog from "./svgArt/dog.sfg";
-import gator from "./svgArt/gator.sfg";
-import heart from "./svgArt/heart.sfg";
-import horse from "./svgArt/horse.sfg";
+import bird from "./svgArt/bird.svg";
+import cat from "./svgArt/cat.svg";
+import cow from "./svgArt/cow.svg";
+import dog from "./svgArt/dog.svg";
+import gator from "./svgArt/gator.svg";
+import heart from "./svgArt/heart.svg";
+import horse from "./svgArt/horse.svg";
+
+
+const svgMap = {
+    bird,
+    cat,
+    cow,
+    dog,
+    gator,
+    horse
+};
 
 function AnimalShow ({type}) {
-    return <div>{type}</div>
+    return <div>
+        <img alt="animal" src={svgMap[type]} />
+    </div>
 }
 
 export default AnimalShow;
