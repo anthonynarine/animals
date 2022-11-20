@@ -1,4 +1,5 @@
 .app{
+    background-color: rgb(233, 186, 212);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,13 +14,13 @@ button {
     text-decoration: none;
     outline: none;
     color: rgb(15, 15, 15);
-    background-color: #f7cbed;
+    background-color: #23d346;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px rgb(129, 94, 132);
 }
   
-button:hover {background-color: #943474}
+button:hover {background-color: #bb76a6}
   
 button:active {
     background-color: #e2d6dd;
