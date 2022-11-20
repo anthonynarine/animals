@@ -17,7 +17,7 @@ function App() {
 
     const renderedAnimals = animals.map((animal, index) =>{
         return <AnimalShow type={animal} key={index} />
-    })
+    });
 
     return <div>
         <button onClick={handleClick}>Add Animal</button>
