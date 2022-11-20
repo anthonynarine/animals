@@ -69,3 +69,17 @@ This will utilize React's Event system and the state system
     4  When the user does something, update the piece of satate
        this causes React to render the component
 
+
+                        ~ using List in React ~
+       1. We want to look at every element inside the array of animals.
+       2. We then want to transform each element in the array. 
+
+          We want to take the string in the array and trun that string into 
+          an instance of the AnimalShow component. 
+                This process is done using Js map function
+
+        
+       
+          
+
+
