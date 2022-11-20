@@ -76,10 +76,85 @@ This will utilize React's Event system and the state system
 
           We want to take the string in the array and trun that string into 
           an instance of the AnimalShow component. 
-                This process is done using Js map function
+                This gets done by the Js map function
+            
+        const renderedAnimals = animals.map((animal, index) =>{
+            return <AnimalShow type={animal} key={index} />
+        });
+
+        ~ the key={index}  Is React doing some record keeping
+          React wants to be able to identify each individual 
+          element that you are using (it's unimportant for app)
 
         
-       
+       ~ Handling The SVG (scalable vectory graphic) images ~
+            1. Import all SVG images in AnimalShow.js
+            
+            2. We need to somwhow take type and use it to decidewhich of the different SVGs we want to dispaly.  
+
+               This is accomplished by creatign a object of each svg
+
+               const svgMap = {
+                    bird,
+                    cat,
+                    cow,
+                    dog,
+                    gator,
+                    horse
+                };
+         ~ whenever we are writing an Object where the Key is IDENTICal
+           to the Value we can Js allows us to write it out as show above
+           Js takes the Key and assigns it a value the at the same time.
+            
+            As opposed to writing it out as show below. 
+
+                 const svgMap { 
+                    bird: bird,
+                    cat: cat,
+                    etc...
+                }
+
+            3. Now we can look up for the key of whatever that type(prop name)
+               is out of our svgMap and that will give us back an svg.
+
+            4. we add an img tag:
+               A) refrence the svg map we created
+                    src = {svgMap}
+               B) and look up a key of type
+                <img alt="animal" src={svgMap[type]} />
           
+    ~ Entire Function as of now~
+            
+function AnimalShow ({type}) {
+    return <div>
+        <img alt="animal" src={svgMap[type]} />
+    </div>
+};
 
 
+~ Using useState to show a tiny heart that grows on userClick ~
+
+    1. import {useState} from "react";
+    2. Here we will use to div to listen for clicks not the img
+    
+function AnimalShow ({type}) {
+    return <div onClick={handleClick}>
+        <img alt="animal" src={svgMap[type]} />
+    </div>
+};
+
+    3. we create a funtion to handle the click
+
+function AnimalShow ({type}) {
+    const handleClick = () => {
+
+    }
+
+    return <div onClick={handleClick}>
+        <img alt="animal" src={svgMap[type]} />
+    </div>
+
+    4. we need to create a state that tracks the num
+       of times we click. We also want to increase in size
+       each time we click on it
+       
