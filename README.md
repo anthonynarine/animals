@@ -156,5 +156,43 @@ function AnimalShow ({type}) {
 
     4. we need to create a state that tracks the num
        of times we click. We also want to increase in size
-       each time we click on it
-       
+       each time we click on it.
+
+       1. first create a piece of state called clicks
+       2. everytime a user clicks we update teh clicks piece 
+          of state.
+
+function AnimalShow ({type}) {
+    const [click, setClick] = useState(0)  // 1. state created 
+
+    const handleClick = () => {           
+        setClick(click + 1)                // 2. state updated
+    }
+
+    return <div onClick={handleClick}>
+        <img alt="animal" src={svgMap[type]} />
+    </div>
+
+        3. to show the heart add an img tag and add image.
+           Image will be styled inline. 
+
+        ~ Styling ~
+    1. in src folder create 
+        App.css
+        AnimalShow.css
+    2. in App.js 
+        import "./App.css";
+       in AnimalShow.css
+        import "./AnimalShow.css";   
+    3. in App.js
+        the top level div will be given the className app
+         <div className="app"> 
+    
+    4. Assign class name to App.js divs tags
+        1st div className="App"
+        2nd div className="animal-list"
+
+    5. Assign Class Name to AnimalShow.js divs and img tags
+        1st div (only div) className="animal-show"
+        1st img className="animal"
+        2nd img class Name="heart"
